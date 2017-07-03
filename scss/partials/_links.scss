@@ -1,0 +1,25 @@
+// Link Stuffs 
+// --------------------------------------------------
+a {
+  color: $link;
+  transition: color $base-duration $base-timing;
+
+  &:hover {
+    color: shade($link, 25%);
+  }
+
+  &:focus {
+    outline: none; 
+    border: 2px solid $green; 
+  }
+}
+
+// Buttons 
+// --------------------------------------------------
+.button, .btn { 
+  @include button_maker($green, 'ghost'); 
+}
+
+.button-secondary, .btn-secondary { 
+  @include button_maker($secondary, 'ghost'); 
+}

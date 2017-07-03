@@ -1,0 +1,53 @@
+header { 
+    @include grid-container;
+    background:#333;
+    padding:20px;
+
+    .site-title{ 
+      @include grid-column(1, $mobile);
+      margin-bottom:2rem; 
+
+      @include grid-media($tablet) {
+        @include grid-column(2);
+        @include grid-push(1);
+      }
+
+       @include grid-media($laptop) {
+        @include grid-column(4);
+        @include grid-push(2);
+      }
+    }
+
+    .profile-photo { 
+      text-align:center; 
+      img { border-radius: 50%; width:65%; height:auto; margin:2px; border: 2px solid $white;}
+      @include grid-column(1, $mobile);
+
+      @include grid-media($tablet) {
+        @include grid-column(2);
+        @include grid-push(1);
+      }
+    }
+
+    .actions { 
+     // text-align: center; 
+      @include grid-column(1, $mobile);
+
+      @include grid-media($tablet) {
+        @include grid-column(2);
+        @include grid-push(1);
+      }
+
+      .button { 
+        width:100%; 
+        margin-bottom:1rem;
+        position:relative; 
+
+        span.fa {padding-right:1rem; }
+
+        &:last-of-type { 
+          margin-bottom:0; 
+        }
+      }
+    }
+}

@@ -1,0 +1,23 @@
+// Grid Settings 
+$mobile: (
+  columns: 1,
+  gutter: 2rem
+);
+
+$phone: (
+  columns: 5,
+  gutter: 2rem,
+  media: "(min-width: 430px)",
+);
+
+$tablet: (
+  columns: 4,
+  gutter: 2rem,
+  media: "(min-width: 768px)",
+);
+
+$laptop: (
+  columns: 4,
+  gutter: 2rem,
+  media: "(min-width: 1024px)",
+);
