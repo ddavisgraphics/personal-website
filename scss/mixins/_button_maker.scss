@@ -1,15 +1,16 @@
-@mixin button_maker($color, $type) {
+@mixin button_maker($color, $text, $type) {
   display:inline-block;
   padding:10px 20px;
   border-radius:4px;
   font-size:1em; 
   
-  $font-color-list: darken($color, 20%), lighten($color, 20%);
+  $font-color-list: darken($color, 20%), lighten($color, 20%), #fff, #000;
+  $pick-best: pick_best_color($color, $font-color-list); 
 
   @if $type == 'ghost' {
     background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
+    color: $text; 
+    border: 2px solid $text; 
 
      &:hover,&:active,&:focus {
       background-color: transpaent;
@@ -19,10 +20,12 @@
     }
   } @else {
     background-color: $color;
-    color: pick_best_color($color, $font-color-list);
+    color: $text; 
+    border: 2px solid darken($color, 10%);
     &:hover,&:active,&:focus {
       background-color: darken($color, 10%);
-      color: darken(pick_best_color($color, $font-color-list), 10%);
+      color: $text; 
+      border: 2px solid darken($color, 20%);
     }
   }
 }

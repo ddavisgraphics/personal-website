@@ -1,0 +1,61 @@
+.nav-toggle { 
+  position:absolute; 
+  top:2rem; 
+  left:2rem;
+  border:2px solid $white; 
+  color:$white; 
+  padding:10px; 
+  border-radius:1rem; 
+
+  .text { 
+    display:none; 
+    @include grid-media($phone){ 
+      display:inline-block; 
+    }
+  }
+
+  &:hover,&:active,&:focus { 
+    cursor: pointer; 
+    color:$green; 
+    border-color:$green;
+  } 
+
+  @include grid-media($tablet){
+    display:none; 
+  }
+}
+
+nav { 
+  @include grid-container;
+  background:$green;
+  padding:2rem;
+  display:none; 
+
+  .menu-item{ 
+    @include grid-column(1, $mobile);
+
+    a { 
+      @include button_maker($white, darken($secondary,13%), 'ghost'); 
+      width:100%; 
+      margin-bottom:1rem; 
+      font-weight:bold;
+      text-align:center;
+
+      &:hover,&:active,&:focus { 
+        @include button_maker($secondary, $white, 'solid'); 
+      }
+    }
+
+    @include grid-media($phone){ 
+      @include grid-column(2); 
+    }
+
+    @include grid-media($tablet){ 
+      @include grid-column(1); 
+    }
+  }
+
+  @include grid-media($tablet){ 
+    display:block;
+  }
+}

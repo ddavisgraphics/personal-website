@@ -1,9 +1,9 @@
 header { 
     @include grid-container;
-    background:#333;
-    padding:20px;
+    background:$dark-gray;
+    padding:2rem;
 
-    .site-title{ 
+    .site-title { 
       @include grid-column(1, $mobile);
       margin-bottom:2rem; 
 
@@ -14,29 +14,18 @@ header {
 
        @include grid-media($laptop) {
         @include grid-column(4);
-        @include grid-push(2);
+        @include grid-push(2); 
       }
     }
 
     .profile-photo { 
       text-align:center; 
-      img { border-radius: 50%; width:65%; height:auto; margin:2px; border: 2px solid $white;}
-      @include grid-column(1, $mobile);
-
-      @include grid-media($tablet) {
-        @include grid-column(2);
-        @include grid-push(1);
-      }
+      img { border-radius: 50%; width:65%; max-width:320px; height:auto; margin:2px; border: 2px solid $white;}
     }
-
+    
     .actions { 
      // text-align: center; 
       @include grid-column(1, $mobile);
-
-      @include grid-media($tablet) {
-        @include grid-column(2);
-        @include grid-push(1);
-      }
 
       .button { 
         width:100%; 
@@ -49,5 +38,26 @@ header {
           margin-bottom:0; 
         }
       }
+
+      @include grid-media($tablet) {
+        @include grid-column(4);
+        .button  { 
+          @include grid-column(2); 
+          // &::last-of-type{ 
+          //   @include omega(); 
+          // }
+        }
+      }
+
+      @include grid-media($laptop) {
+        @include grid-column(8);
+        .button  { 
+          @include grid-column(2); 
+          // &::last-of-type{ 
+          //   @include omega(); 
+          // }
+        }
+      }
+
     }
 }

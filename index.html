@@ -20,54 +20,69 @@
         <a href="#main" class="skip"> Skip to Main Content </a>
 
         <header aria-label="site header containing quicklinks to logo and picture">
-            <div class="profile-photo">
-                <img class="photo" src="img/profile_photo.jpg" alt="a picture of me behind my laptop" aria-label="photo of me (david j. davis)"/>
-            </div>
-
             <div class="site-title"> 
-                <h1 class="visuallyhidden"> David J. Davis - Designer & Developer </h1>
-                <img src="img/logo.svg" alt="David J. Davis - Designer & Developer" aria-label="logo for website and resume" aria-roledescription="logo">
-            </div>
+                <div class="profile-photo">
+                    <img class="photo" src="img/profile_photo.jpg" alt="a picture of me behind my laptop" aria-label="photo of me (david j. davis)"/>
+                </div>
 
-            <nav class="actions">
-                <a class="button" href="https://github.com/ddavisgraphics"> 
-                    <span class="fa fa-github-alt" aria-hidden="true"></span> 
-                    Github 
-                </a>
-                <a class="button" href="https://codepen.io/ddavisgraphics/"> 
-                    <span class="fa fa-codepen" aria-hidden="true"></span>
-                    Codepen 
-                </a>
-                <a class="button" href="https://gist.github.com/ddavisgraphics?page=1">
-                    <span class="fa fa-github" aria-hidden="true"></span> 
-                    Gist 
-                </a>
-                <a class="button" href="https://www.behance.net/ddavisgraphics"> 
-                    <span class="fa fa-behance-square" aria-hidden="true"></span>
-                    Behance Work 
-                </a> 
-             </nav>
+                <div class="logo"> 
+                    <h1 class="visuallyhidden"> David J. Davis - Designer & Developer </h1>
+                    <img src="img/logo.svg" alt="David J. Davis - Designer & Developer" aria-label="logo for website and resume" aria-roledescription="logo">
+                </div>
+            </div>
         </header>
+
+        <nav id="main-nav" class="site-menu">
+            <div class="nav-toggle">
+                <span class="fa fa fa-bars"></span> 
+                <span class="text"> Menu </span> 
+            </div>
+            <ul>   
+                <li class="menu-item"> 
+                    <a href="#about"> About Me </a> 
+                </li>
+
+                <li class="menu-item"> 
+                    <a href="#item1"> Menu Item </a> 
+                </li>
+
+                <li class="menu-item"> 
+                    <a href="#item1"> Menu Item </a> 
+                </li>
+
+                <li class="menu-item"> 
+                    <a href="#item1"> Menu Item </a> 
+                </li>
+
+                <li class="menu-item"> 
+                    <a href="#item1"> Menu Item </a> 
+                </li>
+            </ul>
+        </nav>
 
         <!-- Website Content --> 
         <main class="scroll-on-page" id="main">
         <article>
+             <!-- Page Content Sections -->
             <section>
-            <h4 id="scroll-link-1">First Target</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt?</p>
+                <h2 id="about"> About Me: </h2>
+                
+                <p> I'm the wonderful hybrid of designer and developer.  I understand the value of both sides and strive to make sure that my websites and applications follow the best practices throughout the whole process.  Frontend development is always a bit of a fun passion for me, but I love the challenges that are often presented with backend development and computational programming.  </p> 
             </section>
+             <!-- Page Content Sections -->
             <section>
-            <h4 id="scroll-link-2">Second Target</h4>
+            <h2 id="scroll-link-2">Second Target</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt?</p>
             </section>
+            <!-- Page Content Sections -->
             <section>
-            <h4 id="scroll-link-3">Last Target</h4>
-            <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt?</p>
-            <a class="scroll-on-page-link" href="#scroll-on-page-top">Back to top</a>
+                <h2 id="scroll-link-3">Last Target</h2>
+                <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aliquid necessitatibus, repudiandae veniam labore, consequatur maiores dolore unde non deleniti, aliquam minima ex nulla error eveniet vel tempore, in incidunt?</p>
+                <a class="scroll-on-page-link" href="#scroll-on-page-top">Back to top</a>
             </section>
         </article>
         </main> 
+        
 
         <!--  JavaScript  Stuff --> 
         <script src="js/vendor/jquery-3.2.1.min.js"></script> 

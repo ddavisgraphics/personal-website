@@ -2638,7 +2638,7 @@ textarea {
     page-break-after: avoid; } }
 header {
   background: #333;
-  padding: 20px; }
+  padding: 2rem; }
   header::after {
     clear: both;
     content: "";
@@ -2656,37 +2656,23 @@ header {
         margin-left: calc(25% - 2.5rem + 4rem); } }
     @media (min-width: 1024px) {
       header .site-title {
-        width: calc(100% - 4rem);
-        float: left;
-        margin-left: 2rem;
-        margin-left: calc(50% - 3rem + 4rem); } }
-  header .profile-photo {
-    text-align: center;
-    width: calc(100% - 4rem);
-    float: left;
-    margin-left: 2rem; }
-    header .profile-photo img {
-      border-radius: 50%;
-      width: 65%;
-      height: auto;
-      margin: 2px;
-      border: 2px solid #fff; }
-    @media (min-width: 768px) {
-      header .profile-photo {
         width: calc(50% - 3rem);
         float: left;
         margin-left: 2rem;
         margin-left: calc(25% - 2.5rem + 4rem); } }
+  header .profile-photo {
+    text-align: center; }
+    header .profile-photo img {
+      border-radius: 50%;
+      width: 65%;
+      max-width: 320px;
+      height: auto;
+      margin: 2px;
+      border: 2px solid #fff; }
   header .actions {
     width: calc(100% - 4rem);
     float: left;
     margin-left: 2rem; }
-    @media (min-width: 768px) {
-      header .actions {
-        width: calc(50% - 3rem);
-        float: left;
-        margin-left: 2rem;
-        margin-left: calc(25% - 2.5rem + 4rem); } }
     header .actions .button {
       width: 100%;
       margin-bottom: 1rem;
@@ -2695,6 +2681,24 @@ header {
         padding-right: 1rem; }
       header .actions .button:last-of-type {
         margin-bottom: 0; }
+    @media (min-width: 768px) {
+      header .actions {
+        width: calc(100% - 4rem);
+        float: left;
+        margin-left: 2rem; }
+        header .actions .button {
+          width: calc(50% - 3rem);
+          float: left;
+          margin-left: 2rem; } }
+    @media (min-width: 1024px) {
+      header .actions {
+        width: calc(100% - 4rem);
+        float: left;
+        margin-left: 2rem; }
+        header .actions .button {
+          width: calc(25% - 2.5rem);
+          float: left;
+          margin-left: 2rem; } }
 
 a {
   color: #20567a;
@@ -2732,6 +2736,85 @@ a {
     border-color: #20567a;
     border: 2px solid #20567a;
     color: #20567a; }
+
+main {
+  padding: 2rem; }
+
+.nav-toggle {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 1rem; }
+  .nav-toggle .text {
+    display: none; }
+    @media (min-width: 430px) {
+      .nav-toggle .text {
+        display: inline-block; } }
+  .nav-toggle:hover, .nav-toggle:active, .nav-toggle:focus {
+    cursor: pointer;
+    color: #c1cc46;
+    border-color: #c1cc46; }
+  @media (min-width: 768px) {
+    .nav-toggle {
+      display: none; } }
+
+nav {
+  background: #c1cc46;
+  padding: 2rem;
+  display: none; }
+  nav::after {
+    clear: both;
+    content: "";
+    display: block; }
+  nav .menu-item {
+    width: calc(100% - 4rem);
+    float: left;
+    margin-left: 2rem; }
+    nav .menu-item a {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 1em;
+      background-color: transparent;
+      color: #123145;
+      border: 2px solid #123145;
+      width: 100%;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      text-align: center; }
+      nav .menu-item a:hover, nav .menu-item a:active, nav .menu-item a:focus {
+        background-color: transpaent;
+        border-color: #fff;
+        border: 2px solid #fff;
+        color: #fff; }
+      nav .menu-item a:hover, nav .menu-item a:active, nav .menu-item a:focus {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 1em;
+        background-color: #20567a;
+        color: #fff;
+        border: 2px solid #153a52; }
+        nav .menu-item a:hover:hover, nav .menu-item a:hover:active, nav .menu-item a:hover:focus, nav .menu-item a:active:hover, nav .menu-item a:active:active, nav .menu-item a:active:focus, nav .menu-item a:focus:hover, nav .menu-item a:focus:active, nav .menu-item a:focus:focus {
+          background-color: #153a52;
+          color: #fff;
+          border: 2px solid #0b1d29; }
+    @media (min-width: 430px) {
+      nav .menu-item {
+        width: calc(50% - 3rem);
+        float: left;
+        margin-left: 2rem; } }
+    @media (min-width: 768px) {
+      nav .menu-item {
+        width: calc(25% - 2.5rem);
+        float: left;
+        margin-left: 2rem; } }
+  @media (min-width: 768px) {
+    nav {
+      display: block; } }
 
 .skip {
   display: block;

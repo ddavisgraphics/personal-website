@@ -17,9 +17,9 @@ a {
 // Buttons 
 // --------------------------------------------------
 .button, .btn { 
-  @include button_maker($green, 'ghost'); 
+  @include button_maker($green, #fff, 'ghost'); 
 }
 
 .button-secondary, .btn-secondary { 
-  @include button_maker($secondary, 'ghost'); 
+  @include button_maker($secondary, #fff, 'ghost'); 
 }

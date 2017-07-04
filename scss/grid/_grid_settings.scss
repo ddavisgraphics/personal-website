@@ -1,11 +1,18 @@
 // Grid Settings 
+$neat-grid: (
+  columns: 12,
+  gutter: 2rem,
+);
+
+
+// Custom Grids 
 $mobile: (
   columns: 1,
   gutter: 2rem
 );
 
 $phone: (
-  columns: 5,
+  columns: 4,
   gutter: 2rem,
   media: "(min-width: 430px)",
 );
@@ -17,7 +24,7 @@ $tablet: (
 );
 
 $laptop: (
-  columns: 4,
+  columns: 8,
   gutter: 2rem,
   media: "(min-width: 1024px)",
 );
